@@ -1,0 +1,9 @@
+1. coin API를 useEffect를 이용해 페이지가 로딩될 때 불러온다.
+2.fetch : API 가져오기, response로 코인 정보를 받는다.
+(이 모든 과정은 네트워크의 ticker에서 확인이 가능하다.)
+3. data를 state에 넣기 -> useState
+4. map의 첫 번째 매개변수는 함수(배열 요소에 각각 적용될 함수) 두 번째 매개변수는 index
+5.  coins.map((coin) => <li>{coin.name} ({coin.symbol}) : ${coin.quotes.USD.price} USD</li>) 에서 괄호 안 coin은 fetch를 통해 불러온 코인 각각을 뜻한다. 
+처음에는 기본값으로 되어있는 빈 array를 넘겨주기 때문에 0이었다가, 데이터를 다 받아오면 바뀐다.
+
+과제 : 인풋창에 달러 입력하면 코인으로 얼마인지 나오게~
